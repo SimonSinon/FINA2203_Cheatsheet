@@ -1,0 +1,931 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{array}
+\usepackage{longtable}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{FINA 2203 Exam Summary}
+\lhead{Fundamentals of Business Finance}
+\rfoot{Page \thepage}
+
+\title{\textbf{FINA 2203: Fundamentals of Business Finance}\\
+\Large Comprehensive Exam Summary}
+\author{Lecture Notes Summary}
+\date{Fall 2025}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+%==============================================================================
+\section{Chapter 6: Bonds}
+%==============================================================================
+
+\subsection{Bond Terminology}
+
+\begin{tcolorbox}[title=Key Definitions]
+\begin{itemize}
+    \item \textbf{Bond}: A security sold by governments and corporations to raise money from investors today in exchange for promised future payments
+    \item \textbf{Face Value (Par Value)}: The notional amount used to compute interest payments; typically repaid at maturity
+    \item \textbf{Coupon Rate}: The annual interest rate stated on the bond, expressed as APR
+    \item \textbf{Maturity Date}: The final repayment date of the bond
+    \item \textbf{Term}: Time remaining until the repayment date
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Coupon Payment Formula}
+
+\begin{equation}
+\boxed{CPN = \frac{\text{Coupon Rate} \times \text{Face Value}}{\text{Number of Coupon Payments per Year}}}
+\end{equation}
+
+\textbf{Example}: A bond with 6\% coupon rate, \$1000 face value, semiannual payments:
+\[CPN = \frac{0.06 \times 1000}{2} = \$30 \text{ per period}\]
+
+%------------------------------------------------------------------------------
+\subsection{Zero-Coupon Bonds}
+%------------------------------------------------------------------------------
+
+\subsubsection{Characteristics}
+\begin{itemize}
+    \item Only two cash flows: purchase price today and face value at maturity
+    \item Always trades at a \textbf{discount} to face value
+    \item Treasury bills are zero-coupon bonds with maturity up to one year
+\end{itemize}
+
+\subsubsection{Yield to Maturity of Zero-Coupon Bond}
+
+\begin{equation}
+\boxed{YTM_n = \left(\frac{\text{Face Value}}{\text{Price}}\right)^{1/n} - 1}
+\end{equation}
+
+\subsubsection{Price of Zero-Coupon Bond}
+
+\begin{equation}
+\boxed{P = \frac{\text{Face Value}}{(1 + YTM_n)^n}}
+\end{equation}
+
+\textbf{Example}: 5-year zero-coupon bond, \$100 face value, YTM = 5\%:
+\[P = \frac{100}{(1.05)^5} = \$78.35\]
+
+%------------------------------------------------------------------------------
+\subsection{Coupon Bonds}
+%------------------------------------------------------------------------------
+
+\subsubsection{Coupon Bond Pricing Formula}
+
+\begin{equation}
+\boxed{P = CPN \times \frac{1}{y}\left[1 - \frac{1}{(1+y)^N}\right] + \frac{FV}{(1+y)^N}}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $P$ = Current price of the bond
+    \item $CPN$ = Coupon payment per period
+    \item $y$ = Yield to maturity per period
+    \item $N$ = Number of periods until maturity
+    \item $FV$ = Face value
+\end{itemize}
+
+\begin{tcolorbox}[title=Important Note]
+For semiannual coupon bonds:
+\begin{itemize}
+    \item Divide annual coupon rate by 2 to get periodic coupon rate
+    \item Divide annual YTM by 2 to get periodic yield
+    \item Multiply years to maturity by 2 to get number of periods
+\end{itemize}
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+\subsection{Bond Price and YTM Relationship}
+%------------------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{When...} & \textbf{Bond trades...} & \textbf{Condition} \\
+\midrule
+Coupon Rate $>$ YTM & At a Premium (above par) & Price $>$ Face Value \\
+Coupon Rate $=$ YTM & At Par & Price $=$ Face Value \\
+Coupon Rate $<$ YTM & At a Discount (below par) & Price $<$ Face Value \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Interest Rate Risk}
+
+\begin{tcolorbox}[title=Key Relationships]
+\begin{enumerate}
+    \item \textbf{Inverse Relationship}: Bond prices and interest rates move in opposite directions
+    \item \textbf{Longer Maturity} $\Rightarrow$ \textbf{Higher Interest Rate Risk}
+    \item \textbf{Lower Coupon Rate} $\Rightarrow$ \textbf{Higher Interest Rate Risk}
+\end{enumerate}
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+\subsection{Corporate Bonds and Credit Risk}
+%------------------------------------------------------------------------------
+
+\subsubsection{Credit Spread}
+\begin{equation}
+\boxed{\text{Credit Spread} = \text{Corporate Bond Yield} - \text{Treasury Yield}}
+\end{equation}
+
+\subsubsection{Bond Ratings}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Category} & \textbf{Ratings} \\
+\midrule
+Investment Grade & AAA, AA, A, BBB \\
+Speculative (Junk/High-Yield) & BB, B, CCC, CC, C, D \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\newpage
+%==============================================================================
+\section{Chapter 7: Stock Valuation}
+%==============================================================================
+
+\subsection{Stock Basics}
+
+\begin{tcolorbox}[title=Types of Stock]
+\begin{itemize}
+    \item \textbf{Common Stock}: Voting rights, residual claim on assets, dividends not guaranteed
+    \item \textbf{Preferred Stock}: Priority over common stock for dividends and liquidation, usually fixed dividends, limited or no voting rights
+\end{itemize}
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+\subsection{One-Year Investor: Stock Returns}
+%------------------------------------------------------------------------------
+
+\subsubsection{Stock Price (One-Year Holding)}
+
+\begin{equation}
+\boxed{P_0 = \frac{Div_1 + P_1}{1 + r_E}}
+\end{equation}
+
+\subsubsection{Total Return Components}
+
+\begin{equation}
+\boxed{r_E = \underbrace{\frac{Div_1}{P_0}}_{\text{Dividend Yield}} + \underbrace{\frac{P_1 - P_0}{P_0}}_{\text{Capital Gain Rate}}}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Dividend-Discount Model (DDM)}
+%------------------------------------------------------------------------------
+
+\subsubsection{General Form}
+
+\begin{equation}
+\boxed{P_0 = \frac{Div_1}{(1+r_E)} + \frac{Div_2}{(1+r_E)^2} + \cdots + \frac{Div_N}{(1+r_E)^N} + \frac{P_N}{(1+r_E)^N}}
+\end{equation}
+
+\subsubsection{Infinite Horizon (No Terminal Price)}
+
+\begin{equation}
+P_0 = \sum_{t=1}^{\infty} \frac{Div_t}{(1+r_E)^t}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Constant Dividend Growth Model (Gordon Growth Model)}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{P_0 = \frac{Div_1}{r_E - g}}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $Div_1$ = Expected dividend next year
+    \item $r_E$ = Equity cost of capital (required return)
+    \item $g$ = Constant dividend growth rate (must be $< r_E$)
+\end{itemize}
+
+\subsubsection{Rearranging for Cost of Equity}
+
+\begin{equation}
+\boxed{r_E = \frac{Div_1}{P_0} + g}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Dividend Growth Rate}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{g = \text{Retention Rate} \times \text{Return on New Investment}}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item Retention Rate $= 1 -$ Dividend Payout Rate
+    \item Dividend Payout Rate $= \dfrac{Div}{EPS}$
+\end{itemize}
+
+\subsubsection{Dividend Calculation}
+
+\begin{equation}
+Div_1 = EPS_1 \times \text{Dividend Payout Rate}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Two-Stage Growth Model}
+%------------------------------------------------------------------------------
+
+For a firm with high growth initially, then constant growth:
+
+\begin{equation}
+\boxed{P_0 = \sum_{t=1}^{N} \frac{Div_t}{(1+r_E)^t} + \frac{1}{(1+r_E)^N} \times \frac{Div_{N+1}}{r_E - g}}
+\end{equation}
+
+Where $g$ is the long-run constant growth rate after year $N$.
+
+%------------------------------------------------------------------------------
+\subsection{Total Payout Model}
+%------------------------------------------------------------------------------
+
+Used when firms repurchase shares:
+
+\begin{equation}
+\boxed{P_0 = \frac{PV(\text{Future Total Dividends and Repurchases})}{\text{Shares Outstanding}}}
+\end{equation}
+
+\begin{equation}
+\text{Equity Value} = \frac{\text{Total Payout}_1}{r_E - g}
+\end{equation}
+
+Then: $P_0 = \dfrac{\text{Equity Value}}{\text{Shares Outstanding}}$
+
+\newpage
+%==============================================================================
+\section{Chapter 9: Fundamentals of Capital Budgeting}
+%==============================================================================
+
+\subsection{Key Concepts}
+
+\begin{tcolorbox}[title=Important Distinctions]
+\begin{itemize}
+    \item \textbf{Operating Expenses}: Expenses directly incurred, deducted immediately
+    \item \textbf{Capital Expenditures}: Large purchases depreciated over time
+    \item \textbf{Incremental Cash Flows}: Only cash flows that change as a result of the project
+\end{itemize}
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+\subsection{Incremental Earnings}
+%------------------------------------------------------------------------------
+
+\subsubsection{EBIT Calculation}
+
+\begin{equation}
+\boxed{EBIT = \text{Incremental Revenue} - \text{Incremental Costs} - \text{Depreciation}}
+\end{equation}
+
+\subsubsection{Income Tax}
+
+\begin{equation}
+\boxed{\text{Income Tax} = EBIT \times \text{Marginal Tax Rate}}
+\end{equation}
+
+\subsubsection{Incremental Earnings (Unlevered Net Income)}
+
+\begin{equation}
+\boxed{\text{Incremental Earnings} = (Revenue - Costs - Depreciation) \times (1 - T_c)}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Free Cash Flow}
+%------------------------------------------------------------------------------
+
+\subsubsection{From Earnings to Free Cash Flow}
+
+\begin{equation}
+\boxed{\text{FCF} = \text{Unlevered Net Income} + \text{Depreciation} - \text{CapEx} - \Delta NWC}
+\end{equation}
+
+\subsubsection{Direct Calculation}
+
+\begin{equation}
+\boxed{\text{FCF} = (Revenue - Costs) \times (1 - T_c) + T_c \times Depreciation - CapEx - \Delta NWC}
+\end{equation}
+
+\begin{tcolorbox}[title=Depreciation Tax Shield]
+\begin{equation}
+\text{Depreciation Tax Shield} = T_c \times \text{Depreciation}
+\end{equation}
+This represents the tax savings from depreciation expense.
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+\subsection{Net Working Capital}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{NWC = \text{Current Assets} - \text{Current Liabilities}}
+\end{equation}
+
+\begin{equation}
+NWC = \text{Cash} + \text{Inventory} + \text{Receivables} - \text{Payables}
+\end{equation}
+
+\begin{equation}
+\boxed{\Delta NWC_t = NWC_t - NWC_{t-1}}
+\end{equation}
+
+\textbf{Note}: An \textit{increase} in NWC is a cash \textit{outflow} (reduces FCF)
+
+%------------------------------------------------------------------------------
+\subsection{Depreciation Methods}
+%------------------------------------------------------------------------------
+
+\subsubsection{Straight-Line Depreciation}
+
+\begin{equation}
+\boxed{\text{Annual Depreciation} = \frac{\text{Purchase Price}}{\text{Depreciable Life}}}
+\end{equation}
+
+\subsubsection{MACRS Depreciation (5-Year Property)}
+
+\begin{center}
+\begin{tabular}{ccccccc}
+\toprule
+Year & 1 & 2 & 3 & 4 & 5 & 6 \\
+\midrule
+Rate & 20.00\% & 32.00\% & 19.20\% & 11.52\% & 11.52\% & 5.76\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%------------------------------------------------------------------------------
+\subsection{Asset Sales and Salvage Value}
+%------------------------------------------------------------------------------
+
+\subsubsection{Book Value}
+
+\begin{equation}
+\boxed{\text{Book Value} = \text{Purchase Price} - \text{Accumulated Depreciation}}
+\end{equation}
+
+\subsubsection{Capital Gain or Loss}
+
+\begin{equation}
+\boxed{\text{Capital Gain} = \text{Sale Price} - \text{Book Value}}
+\end{equation}
+
+\subsubsection{After-Tax Cash Flow from Asset Sale}
+
+\begin{equation}
+\boxed{\text{After-Tax CF} = \text{Sale Price} - T_c \times (\text{Sale Price} - \text{Book Value})}
+\end{equation}
+
+Or equivalently:
+\begin{equation}
+\text{After-Tax CF} = \text{Sale Price} - T_c \times \text{Capital Gain}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{NPV Calculation}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{NPV = \sum_{t=0}^{T} \frac{FCF_t}{(1+r)^t}}
+\end{equation}
+
+\begin{tcolorbox}[title=Decision Rule]
+\begin{itemize}
+    \item If $NPV > 0$: Accept the project
+    \item If $NPV < 0$: Reject the project
+    \item If $NPV = 0$: Indifferent
+\end{itemize}
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+\subsection{Important Considerations}
+%------------------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{p{5cm}p{6cm}}
+\toprule
+\textbf{Include in Analysis} & \textbf{Exclude from Analysis} \\
+\midrule
+Opportunity Costs & Sunk Costs \\
+Project Externalities (Cannibalization) & Fixed Overhead (if unchanged) \\
+Changes in NWC & Past R\&D Expenditures \\
+Salvage Values & Interest Expense (in discount rate) \\
+Tax Effects & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\newpage
+%==============================================================================
+\section{Chapter 11: Risk and Return in Capital Markets}
+%==============================================================================
+
+\subsection{Realized Returns}
+
+\subsubsection{Single Period Return}
+
+\begin{equation}
+\boxed{R_{t+1} = \frac{Div_{t+1} + P_{t+1} - P_t}{P_t} = \underbrace{\frac{Div_{t+1}}{P_t}}_{\text{Dividend Yield}} + \underbrace{\frac{P_{t+1} - P_t}{P_t}}_{\text{Capital Gain Rate}}}
+\end{equation}
+
+\subsubsection{Compounding Returns Over Multiple Periods}
+
+\begin{equation}
+\boxed{1 + R_{annual} = (1 + R_1)(1 + R_2)(1 + R_3)(1 + R_4)}
+\end{equation}
+
+For quarterly returns that make up a year.
+
+%------------------------------------------------------------------------------
+\subsection{Average Return}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{\bar{R} = \frac{1}{T}(R_1 + R_2 + \cdots + R_T) = \frac{1}{T}\sum_{t=1}^{T} R_t}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Variance and Standard Deviation}
+%------------------------------------------------------------------------------
+
+\subsubsection{Variance (Sample)}
+
+\begin{equation}
+\boxed{Var(R) = \frac{1}{T-1}\sum_{t=1}^{T}(R_t - \bar{R})^2}
+\end{equation}
+
+\subsubsection{Standard Deviation (Volatility)}
+
+\begin{equation}
+\boxed{SD(R) = \sqrt{Var(R)}}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Normal Distribution and Prediction Intervals}
+%------------------------------------------------------------------------------
+
+\subsubsection{95\% Prediction Interval}
+
+\begin{equation}
+\boxed{\text{95\% Interval} = \bar{R} \pm 2 \times SD(R)}
+\end{equation}
+
+\begin{itemize}
+    \item About 68\% of outcomes fall within $\pm 1$ standard deviation
+    \item About 95\% of outcomes fall within $\pm 2$ standard deviations
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Types of Risk}
+%------------------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Type of Risk} & \textbf{Diversifiable?} & \textbf{Risk Premium?} \\
+\midrule
+Systematic (Market) Risk & No & Yes \\
+Unsystematic (Firm-Specific) Risk & Yes & No \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tcolorbox}[title=Key Insight]
+\textbf{Only systematic risk is compensated with higher expected returns.}
+Investors can diversify away unsystematic risk by holding a portfolio.
+\end{tcolorbox}
+
+\newpage
+%==============================================================================
+\section{Chapter 12: Systematic Risk and the Equity Risk Premium}
+%==============================================================================
+
+\subsection{Portfolio Concepts}
+
+\subsubsection{Portfolio Weights}
+
+\begin{equation}
+\boxed{w_i = \frac{\text{Value of Investment } i}{\text{Total Portfolio Value}}}
+\end{equation}
+
+Note: $\sum_{i=1}^{n} w_i = 1$ (weights sum to 100\%)
+
+\subsubsection{Portfolio Return}
+
+\begin{equation}
+\boxed{R_P = w_1 R_1 + w_2 R_2 + \cdots + w_n R_n = \sum_{i=1}^{n} w_i R_i}
+\end{equation}
+
+\subsubsection{Expected Portfolio Return}
+
+\begin{equation}
+\boxed{E[R_P] = w_1 E[R_1] + w_2 E[R_2] + \cdots + w_n E[R_n]}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Portfolio Volatility (Two-Stock Portfolio)}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{Var(R_P) = w_1^2 SD(R_1)^2 + w_2^2 SD(R_2)^2 + 2w_1 w_2 Corr(R_1, R_2) SD(R_1) SD(R_2)}
+\end{equation}
+
+\begin{equation}
+\boxed{SD(R_P) = \sqrt{Var(R_P)}}
+\end{equation}
+
+\subsubsection{Correlation}
+
+\begin{equation}
+\boxed{Corr(R_i, R_j) = \frac{Cov(R_i, R_j)}{SD(R_i) \times SD(R_j)}}
+\end{equation}
+
+\begin{itemize}
+    \item $Corr = +1$: Perfect positive correlation (no diversification benefit)
+    \item $Corr = -1$: Perfect negative correlation (maximum diversification)
+    \item $Corr = 0$: No correlation
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Beta}
+%------------------------------------------------------------------------------
+
+\begin{tcolorbox}[title=Definition of Beta]
+\textbf{Beta} measures the sensitivity of a stock's return to the market return, representing the amount of systematic risk in the stock.
+\end{tcolorbox}
+
+\begin{itemize}
+    \item $\beta = 1$: Stock moves with the market
+    \item $\beta > 1$: Stock is more volatile than the market
+    \item $\beta < 1$: Stock is less volatile than the market
+    \item $\beta < 0$: Stock moves opposite to the market (rare)
+\end{itemize}
+
+\subsubsection{Portfolio Beta}
+
+\begin{equation}
+\boxed{\beta_P = w_1 \beta_1 + w_2 \beta_2 + \cdots + w_n \beta_n = \sum_{i=1}^{n} w_i \beta_i}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Capital Asset Pricing Model (CAPM)}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{E[R_i] = r_f + \beta_i \times (E[R_{Mkt}] - r_f)}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $E[R_i]$ = Expected return on asset $i$ (also called required return)
+    \item $r_f$ = Risk-free rate
+    \item $\beta_i$ = Beta of asset $i$
+    \item $E[R_{Mkt}]$ = Expected return on the market portfolio
+    \item $(E[R_{Mkt}] - r_f)$ = Market Risk Premium
+\end{itemize}
+
+\subsubsection{Components}
+
+\begin{equation}
+E[R_i] = \underbrace{r_f}_{\text{Time Value of Money}} + \underbrace{\beta_i \times (E[R_{Mkt}] - r_f)}_{\text{Risk Premium for Systematic Risk}}
+\end{equation}
+
+\subsubsection{Security Market Line (SML)}
+
+The graphical representation of CAPM:
+\begin{itemize}
+    \item X-axis: Beta ($\beta$)
+    \item Y-axis: Expected Return ($E[R]$)
+    \item Y-intercept: Risk-free rate ($r_f$)
+    \item Slope: Market risk premium $(E[R_{Mkt}] - r_f)$
+\end{itemize}
+
+\newpage
+%==============================================================================
+\section{Chapter 13: The Cost of Capital}
+%==============================================================================
+
+\subsection{Capital Structure}
+
+\begin{equation}
+\text{Market Value of Assets} = \text{Market Value of Equity} + \text{Market Value of Debt}
+\end{equation}
+
+\subsubsection{Leverage}
+\begin{itemize}
+    \item \textbf{Unlevered Firm}: Financed entirely with equity
+    \item \textbf{Levered Firm}: Uses both debt and equity financing
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Weighted Average Cost of Capital (WACC)}
+%------------------------------------------------------------------------------
+
+\subsubsection{General Formula (with Preferred Stock)}
+
+\begin{equation}
+\boxed{r_{WACC} = r_E \times \frac{E}{E+D+P} + r_{pfd} \times \frac{P}{E+D+P} + r_D(1-T_c) \times \frac{D}{E+D+P}}
+\end{equation}
+
+\subsubsection{Without Preferred Stock}
+
+\begin{equation}
+\boxed{r_{WACC} = r_E \times \frac{E}{E+D} + r_D(1-T_c) \times \frac{D}{E+D}}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $r_E$ = Cost of equity
+    \item $r_D$ = Cost of debt (yield to maturity)
+    \item $r_{pfd}$ = Cost of preferred stock
+    \item $E$ = Market value of equity
+    \item $D$ = Market value of debt
+    \item $P$ = Market value of preferred stock
+    \item $T_c$ = Corporate tax rate
+\end{itemize}
+
+\subsubsection{Unlevered Firm}
+
+\begin{equation}
+r_{WACC} = r_E \quad \text{(for a firm with no debt)}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Cost of Debt}
+%------------------------------------------------------------------------------
+
+\subsubsection{Pre-Tax Cost of Debt}
+Use the yield to maturity (YTM) on the company's existing debt.
+
+\subsubsection{After-Tax (Effective) Cost of Debt}
+
+\begin{equation}
+\boxed{\text{Effective Cost of Debt} = r_D \times (1 - T_c)}
+\end{equation}
+
+\textbf{Example}: If $r_D = 6\%$ and $T_c = 25\%$:
+\[\text{Effective Cost of Debt} = 0.06 \times (1 - 0.25) = 4.5\%\]
+
+%------------------------------------------------------------------------------
+\subsection{Cost of Preferred Stock}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{r_{pfd} = \frac{Div_{pfd}}{P_{pfd}}}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $Div_{pfd}$ = Annual preferred dividend
+    \item $P_{pfd}$ = Current price of preferred stock
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Cost of Equity}
+%------------------------------------------------------------------------------
+
+\subsubsection{Method 1: CAPM}
+
+\begin{equation}
+\boxed{r_E = r_f + \beta_E \times (E[R_{Mkt}] - r_f)}
+\end{equation}
+
+Steps:
+\begin{enumerate}
+    \item Estimate the firm's equity beta (usually from regression)
+    \item Determine the risk-free rate (Treasury yield)
+    \item Estimate the market risk premium (historical: 5-7\%)
+    \item Apply the CAPM formula
+\end{enumerate}
+
+\subsubsection{Method 2: Constant Dividend Growth Model (CDGM)}
+
+\begin{equation}
+\boxed{r_E = \frac{Div_1}{P_0} + g}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $Div_1$ = Expected dividend next year
+    \item $P_0$ = Current stock price
+    \item $g$ = Expected dividend growth rate
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{p{5cm}p{5cm}}
+\toprule
+\textbf{CAPM} & \textbf{CDGM} \\
+\midrule
+Requires: & Requires: \\
+- Equity beta & - Current stock price \\
+- Risk-free rate & - Expected dividend \\
+- Market risk premium & - Growth rate estimate \\
+\midrule
+Assumes: & Assumes: \\
+- Beta is correct & - Dividend estimate is correct \\
+- MRP is accurate & - Growth rate matches expectations \\
+- CAPM is valid & - Constant future growth \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%------------------------------------------------------------------------------
+\subsection{WACC Weight Calculations}
+%------------------------------------------------------------------------------
+
+\begin{tcolorbox}[title=Use Market Values]
+Portfolio weights should be based on \textbf{market values} because the cost of capital reflects investors' current assessment of value, not book values.
+\end{tcolorbox}
+
+\begin{equation}
+\text{Weight of Equity} = \frac{\text{Market Value of Equity}}{\text{Total Market Value}}
+\end{equation}
+
+\begin{equation}
+\text{Market Value of Equity} = \text{Share Price} \times \text{Shares Outstanding}
+\end{equation}
+
+\begin{equation}
+\text{Market Value of Debt} = \text{Face Value} \times \text{\% of Face Value}
+\end{equation}
+
+%------------------------------------------------------------------------------
+\subsection{Using WACC to Value Projects}
+%------------------------------------------------------------------------------
+
+\subsubsection{Levered Value of a Project}
+
+\begin{equation}
+\boxed{V_0^L = \sum_{t=0}^{T} \frac{FCF_t}{(1+r_{WACC})^t}}
+\end{equation}
+
+\subsubsection{For a Growing Perpetuity}
+
+\begin{equation}
+\boxed{V_0^L = FCF_0 + \frac{FCF_1}{r_{WACC} - g}}
+\end{equation}
+
+\subsubsection{Key Assumptions for Using WACC}
+\begin{enumerate}
+    \item \textbf{Average Risk}: Project has similar risk to firm's existing projects
+    \item \textbf{Constant Debt-Equity Ratio}: Firm maintains target capital structure
+    \item \textbf{Limited Leverage Effects}: Interest tax deduction is main effect of debt
+\end{enumerate}
+
+%------------------------------------------------------------------------------
+\subsection{Project-Based Cost of Capital}
+%------------------------------------------------------------------------------
+
+When a project has different risk than the firm's existing projects:
+
+\begin{tcolorbox}[title=Different Risk Requires Different WACC]
+Use the WACC of a comparable company in the same industry as the project, not the firm's own WACC.
+\end{tcolorbox}
+
+%------------------------------------------------------------------------------
+\subsection{Net Debt Approach}
+%------------------------------------------------------------------------------
+
+\begin{equation}
+\boxed{\text{Net Debt} = \text{Debt} - \text{Cash and Risk-Free Securities}}
+\end{equation}
+
+\begin{equation}
+r_{WACC} = r_E \times \frac{\text{Market Value of Equity}}{\text{Enterprise Value}} + r_D(1-T_c) \times \frac{\text{Net Debt}}{\text{Enterprise Value}}
+\end{equation}
+
+\newpage
+%==============================================================================
+\section{Summary of Key Formulas}
+%==============================================================================
+
+\subsection{Bond Valuation}
+\begin{align}
+\text{Coupon Payment:} \quad & CPN = \frac{\text{Coupon Rate} \times FV}{\text{Payments per Year}} \\[1em]
+\text{Zero-Coupon YTM:} \quad & YTM_n = \left(\frac{FV}{P}\right)^{1/n} - 1 \\[1em]
+\text{Coupon Bond Price:} \quad & P = CPN \times \frac{1}{y}\left[1 - \frac{1}{(1+y)^N}\right] + \frac{FV}{(1+y)^N}
+\end{align}
+
+\subsection{Stock Valuation}
+\begin{align}
+\text{Constant Growth DDM:} \quad & P_0 = \frac{Div_1}{r_E - g} \\[1em]
+\text{Dividend Growth Rate:} \quad & g = \text{Retention Rate} \times \text{ROI} \\[1em]
+\text{Cost of Equity (DDM):} \quad & r_E = \frac{Div_1}{P_0} + g
+\end{align}
+
+\subsection{Capital Budgeting}
+\begin{align}
+\text{Free Cash Flow:} \quad & FCF = (Rev - Cost)(1-T_c) + T_c \times Dep - CapEx - \Delta NWC \\[1em]
+\text{After-Tax Salvage:} \quad & \text{AT-CF} = \text{Sale Price} - T_c \times (\text{Sale Price} - \text{Book Value}) \\[1em]
+\text{NPV:} \quad & NPV = \sum_{t=0}^{T} \frac{FCF_t}{(1+r)^t}
+\end{align}
+
+\subsection{Risk and Return}
+\begin{align}
+\text{Average Return:} \quad & \bar{R} = \frac{1}{T}\sum_{t=1}^{T} R_t \\[1em]
+\text{Variance:} \quad & Var(R) = \frac{1}{T-1}\sum_{t=1}^{T}(R_t - \bar{R})^2 \\[1em]
+\text{Standard Deviation:} \quad & SD(R) = \sqrt{Var(R)} \\[1em]
+\text{95\% Interval:} \quad & \bar{R} \pm 2 \times SD(R)
+\end{align}
+
+\subsection{Portfolio Theory}
+\begin{align}
+\text{Portfolio Return:} \quad & R_P = \sum_{i=1}^{n} w_i R_i \\[1em]
+\text{2-Stock Variance:} \quad & Var(R_P) = w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + 2w_1w_2\rho_{12}\sigma_1\sigma_2 \\[1em]
+\text{Portfolio Beta:} \quad & \beta_P = \sum_{i=1}^{n} w_i \beta_i
+\end{align}
+
+\subsection{CAPM and WACC}
+\begin{align}
+\text{CAPM:} \quad & E[R_i] = r_f + \beta_i(E[R_{Mkt}] - r_f) \\[1em]
+\text{WACC:} \quad & r_{WACC} = r_E \times \frac{E}{E+D} + r_D(1-T_c) \times \frac{D}{E+D} \\[1em]
+\text{Effective Cost of Debt:} \quad & r_D^{eff} = r_D(1-T_c) \\[1em]
+\text{Cost of Preferred:} \quad & r_{pfd} = \frac{Div_{pfd}}{P_{pfd}}
+\end{align}
+
+\newpage
+%==============================================================================
+\section{Quick Reference Tables}
+%==============================================================================
+
+\subsection{Bond Price vs. YTM Relationship}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Coupon Rate vs YTM} & \textbf{Price vs Par} & \textbf{Trading Status} \\
+\hline
+Coupon Rate $>$ YTM & Price $>$ Par & Premium \\
+Coupon Rate $=$ YTM & Price $=$ Par & At Par \\
+Coupon Rate $<$ YTM & Price $<$ Par & Discount \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Free Cash Flow Components}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Component} & \textbf{Effect on FCF} \\
+\hline
+Unlevered Net Income & + \\
+Add Back Depreciation & + \\
+Capital Expenditures & $-$ \\
+Increase in NWC & $-$ \\
+Decrease in NWC & + \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Risk Summary}
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Risk Type} & \textbf{Other Names} & \textbf{Diversifiable?} & \textbf{Compensated?} \\
+\hline
+Systematic & Market, Non-diversifiable & No & Yes \\
+Unsystematic & Firm-specific, Idiosyncratic & Yes & No \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Beta Interpretation}
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Beta Value} & \textbf{Interpretation} \\
+\hline
+$\beta = 0$ & Risk-free asset \\
+$0 < \beta < 1$ & Less risky than market \\
+$\beta = 1$ & Same risk as market \\
+$\beta > 1$ & More risky than market \\
+$\beta < 0$ & Moves opposite to market \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{MACRS 5-Year Depreciation Schedule}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Year} & 1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+\textbf{Rate} & 20.00\% & 32.00\% & 19.20\% & 11.52\% & 11.52\% & 5.76\% \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
